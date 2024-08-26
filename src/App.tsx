@@ -6,6 +6,10 @@ import {DieObj} from './interface'
 import {nanoid} from 'nanoid'
 import Confetti from 'confetti-react';
 
+export function generateRadNum(min:number, max:number){
+  return Math.floor( Math.random() * (max - min + 1) + min)
+} 
+
 function App() {
 
   const min:number = 1;
@@ -25,9 +29,7 @@ function App() {
     );
   } 
 
-  function generateRadNum(min:number, max:number){
-    return Math.floor( Math.random() * (max - min + 1) + min)
-  }  
+ 
 
   function setHeld(id:string){  
 
@@ -112,4 +114,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
